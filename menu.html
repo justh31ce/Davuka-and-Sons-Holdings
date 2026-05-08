@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu | King's Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav aria-label="Primary">
+    <a class="logo" href="index.html">KING'S <span>FOOD</span></a>
+    <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </button>
+  </nav>
+
+  <aside class="menu-panel" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="order.html">Order</a>
+  </aside>
+
+  <section class="section">
+    <h2 class="title">Our <span>Menu</span></h2>
+
+    <div class="menu-layout">
+      <div class="menu-list">
+        <div class="category">
+          <h3>KOTAS</h3>
+          <div class="item">
+            <div class="item-info"><h4>Chips, Full Russian, Polony</h4><p>Classic Kasi Flavour</p></div>
+            <button class="add-btn" onclick="addItem('Chips, Full Russian, Polony', 20)">R20 <i class="fas fa-plus"></i></button>
+          </div>
+          <div class="item">
+            <div class="item-info"><h4>Chips, Cheese, Russian, Polony</h4><p>Extra Cheese</p></div>
+            <button class="add-btn" onclick="addItem('Chips, Cheese, Russian, Polony', 25)">R25 <i class="fas fa-plus"></i></button>
+          </div>
+          <div class="item">
+            <div class="item-info"><h4>Kings Tower</h4><p>The Ultimate Kota</p></div>
+            <button class="add-btn" onclick="addItem('Kings Tower', 55)">R55 <i class="fas fa-plus"></i></button>
+          </div>
+          <div class="item">
+            <div class="item-info"><h4>Kings Cruizer</h4><p>For True Royalty</p></div>
+            <button class="add-btn" onclick="addItem('Kings Cruizer', 100)">R100 <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="category">
+          <h3>DAGWOODS</h3>
+          <div class="item">
+            <div class="item-info"><h4>Classic Beef Dagwood</h4><p>Lettuce, onion, tomato & beef patty</p></div>
+            <button class="add-btn" onclick="addItem('Classic Beef Dagwood', 15)">R15 <i class="fas fa-plus"></i></button>
+          </div>
+          <div class="item">
+            <div class="item-info"><h4>Royal Dagwood</h4><p>2 patties, 2 eggs, 2 cheese & russian</p></div>
+            <button class="add-btn" onclick="addItem('Royal Dagwood', 65)">R65 <i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ads">
+        <img src="wraps.jpeg" alt="Special offer 1" loading="lazy" class="ad-img">
+        <img src="jj.jpg" alt="Special offer 2" loading="lazy" class="ad-img">
+        <img src="45.jpg" alt="Special offer 3" loading="lazy" class="ad-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Side Drawer Cart -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Royal Cart</h3>
+      <button class="close-cart" onclick="toggleCartDrawer()"><i class="fas fa-times"></i></button>
+    </div>
+    <ul id="cartList" class="cart-list"></ul>
+    <div class="cart-footer">
+      <p class="cart-total">Total: R<span id="total">0.00</span></p>
+      <a class="btn" href="order.html">Proceed to Checkout</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCartDrawer()"></div>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="menu.html" class="nav-item active"><i class="fas fa-utensils"></i><span>Menu</span></a>
+    <a href="#" class="nav-item cart-trigger" onclick="toggleCartDrawer(event)"><i class="fas fa-shopping-bag"></i><span class="cart-badge" id="nav-cart-count-2">0</span></a>
+    <a href="order.html" class="nav-item"><i class="fas fa-receipt"></i><span>Order</span></a>
+  </div>
+
+  <br><br><br> <!-- Space for mobile nav -->
+</body>
+</html>
+
