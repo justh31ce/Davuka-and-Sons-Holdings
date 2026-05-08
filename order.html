@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order | King's Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav aria-label="Primary">
+    <a class="logo" href="index.html">KING'S <span>FOOD</span></a>
+    <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </button>
+  </nav>
+
+  <section class="section">
+    <h2 class="title">Complete <span>Order</span></h2>
+
+    <div class="order-summary glass-panel">
+      <h3 class="order-summary-title">Order Summary</h3>
+      <ul id="cartListOrder" class="cart-list"></ul>
+      <hr style="border-color: rgba(212,175,55,0.2); margin: 15px 0;">
+      <div class="totals-row"><p>Items Total:</p><p>R<span id="totalOrder">0.00</span></p></div>
+      <div class="totals-row"><p>Delivery Fee:</p><p>R<span id="deliveryFee">0.00</span></p></div>
+      <div class="totals-row grand"><p>Grand Total:</p><p>R<span id="grandTotal">0.00</span></p></div>
+    </div>
+
+    <div class="order-box glass-panel">
+      <h3 class="form-title">Delivery Details</h3>
+      <input id="name" placeholder="Full Name" />
+      <input id="phone" type="tel" placeholder="Phone Number (e.g. 071...)" />
+      
+      <select id="orderType" onchange="handleOrderType(); updateDeliveryFee();">
+        <option value="Collection">Collection</option>
+        <option value="Delivery">Delivery</option>
+      </select>
+
+      <select id="area" onchange="updateDeliveryFee()" style="display:none;">
+        <option value="">Select Area...</option>
+        <option value="Eden Park">Eden Park (R10)</option>
+        <option value="Katlehong">Katlehong (R15)</option>
+        <option value="Thokoza">Thokoza (R15)</option>
+        <option value="Other">Other (R50)</option>
+      </select>
+
+      <input id="address" placeholder="Street Address & Stand Number" style="display:none;" />
+      <button class="btn" onclick="sendOrder()"><i class="fab fa-whatsapp"></i> Send Order to Kitchen</button>
+    </div>
+  </section>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="menu.html" class="nav-item"><i class="fas fa-utensils"></i><span>Menu</span></a>
+    <a href="order.html" class="nav-item active"><i class="fas fa-receipt"></i><span>Order</span></a>
+  </div>
+  <br><br><br>
+</body>
+</html>
