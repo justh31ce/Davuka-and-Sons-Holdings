@@ -1,0 +1,318 @@
+:root{
+--primary:#0F2744;
+--secondary:#C89B3C;
+--white:#ffffff;
+--dark:#222;
+--light:#f7f7f7;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo h2{
+color:var(--primary);
+font-weight:800;
+}
+
+.logo span{
+color:var(--secondary);
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.navbar a{
+text-decoration:none;
+color:var(--dark);
+font-weight:600;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:var(--secondary);
+}
+
+.btn-primary{
+background:var(--secondary);
+color:#fff;
+padding:14px 28px;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+background:transparent;
+border:2px solid white;
+color:white;
+padding:14px 28px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.hero{
+height:100vh;
+background:url('../assets/images/hero.jpg') center/cover;
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+position:relative;
+color:white;
+max-width:800px;
+}
+
+.hero h1{
+font-size:4rem;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.1rem;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+}
+
+.stats{
+padding:100px 0;
+background:var(--light);
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.stat-card{
+background:white;
+padding:40px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.stat-card h2{
+font-size:3rem;
+color:var(--secondary);
+}
+
+.about-home{
+padding:120px 0;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image img{
+width:100%;
+border-radius:12px;
+}
+
+.section-tag{
+color:var(--secondary);
+font-weight:700;
+letter-spacing:2px;
+}
+
+.about-content h2{
+font-size:2.8rem;
+margin:20px 0;
+}
+
+.services-preview{
+padding:120px 0;
+background:var(--light);
+}
+
+.section-heading{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-heading span{
+color:var(--secondary);
+font-weight:700;
+}
+
+.section-heading h2{
+font-size:2.7rem;
+margin-top:15px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card i{
+font-size:3rem;
+color:var(--secondary);
+margin-bottom:20px;
+}
+
+.why-us{
+padding:120px 0;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.why-card{
+padding:40px;
+background:white;
+border-radius:12px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.why-card i{
+font-size:3rem;
+color:var(--secondary);
+margin-bottom:20px;
+}
+
+.cta{
+background:var(--primary);
+color:white;
+padding:100px 0;
+text-align:center;
+}
+
+.cta h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.footer{
+background:#09182b;
+color:white;
+padding-top:80px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+.footer-column h4{
+margin-bottom:20px;
+}
+
+.footer-column ul{
+list-style:none;
+}
+
+.footer-column li{
+margin-bottom:10px;
+}
+
+.footer-column a{
+text-decoration:none;
+color:white;
+}
+
+.footer-bottom{
+text-align:center;
+padding:30px;
+margin-top:50px;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:2rem;
+text-decoration:none;
+z-index:999;
+}
