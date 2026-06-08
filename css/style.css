@@ -316,3 +316,82 @@ font-size:2rem;
 text-decoration:none;
 z-index:999;
 }
+.page-banner{
+padding:180px 0 100px;
+background:#0F2744;
+color:white;
+text-align:center;
+}
+
+.page-banner h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.about-page{
+padding:120px 0;
+}
+
+.vision-mission{
+padding:120px 0;
+background:#f7f7f7;
+}
+
+.vm-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+}
+
+.vm-card{
+background:white;
+padding:50px;
+border-radius:12px;
+text-align:center;
+}
+
+.vm-card i{
+font-size:3rem;
+color:#C89B3C;
+margin-bottom:20px;
+}
+
+.objectives{
+padding:120px 0;
+}
+
+.timeline{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.timeline-item{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.service-section{
+padding:120px 0;
+}
+
+.service-detail{
+background:white;
+padding:50px;
+margin-bottom:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.service-detail i{
+font-size:3rem;
+color:#C89B3C;
+margin-bottom:20px;
+}
+
+.service-detail ul{
+margin-top:20px;
+padding-left:20px;
+}
