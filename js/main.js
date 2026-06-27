@@ -2,19 +2,27 @@ const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
 
 menuBtn.addEventListener("click", () => {
-navbar.classList.toggle("active");
+    navbar.classList.toggle("active");
 });
 
-window.addEventListener("scroll", () => {
+const reveals = document.querySelectorAll(
+'.service-card,.why-card,.project-card,.timeline-item,.vm-card,.stat-card'
+);
 
-const header = document.querySelector(".header");
+function revealOnScroll(){
 
-if(window.scrollY > 100){
-header.style.background = "#ffffff";
-header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
-}
-else{
-header.style.boxShadow = "0 2px 15px rgba(0,0,0,.08)";
+reveals.forEach(item=>{
+
+const windowHeight = window.innerHeight;
+const top = item.getBoundingClientRect().top;
+
+if(top < windowHeight - 100){
+item.classList.add("show");
 }
 
 });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
