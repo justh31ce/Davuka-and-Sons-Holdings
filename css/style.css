@@ -697,3 +697,23 @@ font-size:1.5rem;
 }
 
 }
+.service-card,
+.why-card,
+.project-card,
+.timeline-item,
+.vm-card,
+.stat-card{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.service-card.show,
+.why-card.show,
+.project-card.show,
+.timeline-item.show,
+.vm-card.show,
+.stat-card.show{
+opacity:1;
+transform:translateY(0);
+}
